@@ -1,3 +1,5 @@
+/* JS Code for DOM manipulation  and RESP API */
+
 const randomFolks = document.querySelector(".random-peeps");
 const selectUserNumber = document.querySelector("#users");
 
@@ -5,7 +7,6 @@ const getData = async function (numUsers) {
     const userRequest = await fetch(`https://randomuser.me/api?results=${numUsers}`
     );
     const data = await userRequest.json();
-    //console.log(data);
 
     const userResults = data.results;
     displayUser(userResults);  
